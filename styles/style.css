@@ -15,6 +15,92 @@
 */
 
 .page {
+  color: var(--text-color);
+  font-family: 'Inter', sans-serif;
+  background-size: 4px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
+}
+
+.content {
+  width: 100%;
+  max-width: 700px;
+  margin: 0 auto;
+  border: var(--text-color) 2px solid;
+  background-color: var(--background-color);
+}
+
+.header {
+  margin-block: 100px;
+  font-family: 'Press Start 2P';
+}
+
+.header__logo-group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 20px;
+  width: 100%;
+  margin: 0 auto;
+  padding-top: 8.5rem; /* TODO: доделать при верстке мобильного размера */
+}
+
+.header__title {
+  font-size: 65px;  /* TODO: доделать при верстке мобильного размера */
+}
+
+.header__text {
+  font-size: 23px; /* TODO: доделать при верстке мобильного размера */
+  text-transform: uppercase;
+}
+
+.theme-menu {
+  display: flex;
+  justify-content: center;
+  padding-inline-start: 14px;
+}
+
+.theme-menu__list {
+  display: flex;
+  flex-direction: column;
+  row-gap: 7px;
+  padding-block: 25px;
+  font-size: 14px;
+}
+
+.theme-menu__button {
+  position: relative;
+  border-color: transparent;
+  text-transform: uppercase;
+  background-color: transparent;
+  appearance: none;
+}
+
+.theme-menu__button:disabled::before {
+  content: '▶';
+  position: absolute;
+  inset-inline-start: -12px;
+}
+
+.card__title {
+  padding: 4px 24px 4px 10px;
+  font-weight: 700;
+  font-size: 18px;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__text {
+  padding: 25px;
+}
+
+.card__paragraph {
+  padding-block-end: 27px;
+  font-size: 18px;
+}
+
+.card__paragraph:last-child {
+  padding-block-end: 0;
 }
