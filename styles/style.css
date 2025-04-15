@@ -16,6 +16,7 @@
 
 .page {
   color: var(--text-color);
+  background-color: var(--background-color);
   font-family: 'Inter', sans-serif;
   background-size: 4px;
   min-inline-size: 320px;
@@ -27,7 +28,6 @@
   max-width: 700px;
   margin: 0 auto;
   border: var(--text-color) 2px solid;
-  background-color: var(--background-color);
 }
 
 .header {
@@ -94,13 +94,46 @@
 
 .card__text {
   padding: 25px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 27px;
 }
 
 .card__paragraph {
-  padding-block-end: 27px;
   font-size: 18px;
 }
 
-.card__paragraph:last-child {
-  padding-block-end: 0;
+.button {
+  border: var(--text-color) 2px solid;
+  font-size: 14px;
+  font-family: 'Press Start 2P';
+  appearance: none;
+  background-color: transparent;
+}
+
+.card__like-button_container {
+  display: flex;
+  justify-content: end;
+}
+
+.card__like-button {
+  padding: 11px 37px;
+}
+
+.main__save-button_container {
+  padding-block-start: 50px;
+  padding-block-end: 100px;
+  display: flex;
+  justify-content: center;
+}
+
+.main__save-button {
+  display: inline-flex;
+  align-items: center;
+  column-gap: 8px;
+  padding: 15px 20px;
+}
+
+.save-button__icon {
+  stroke: currentColor;
 }
