@@ -42,15 +42,15 @@
   row-gap: 20px;
   width: 100%;
   margin: 0 auto;
-  padding-top: 8.5rem; /* TODO: доделать при верстке мобильного размера */
+  padding-block-start: clamp(7.5rem, 7.1484rem + 1.5vw, 8.5rem);
 }
 
 .header__title {
-  font-size: 65px;  /* TODO: доделать при верстке мобильного размера */
+  font-size: clamp(3.0625rem, 2.7109rem + 1.5vw, 4.0625rem);
 }
 
 .header__text {
-  font-size: 23px; /* TODO: доделать при верстке мобильного размера */
+  font-size: clamp(0.875rem, 0.6758rem + 0.85vw, 1.4375rem);
   text-transform: uppercase;
 }
 
@@ -120,6 +120,10 @@
   padding: 11px 37px;
 }
 
+.main {
+  background-color: var(--background-color);
+}
+
 .main__save-button_container {
   padding-block-start: 50px;
   padding-block-end: 100px;
@@ -130,10 +134,21 @@
 .main__save-button {
   display: inline-flex;
   align-items: center;
-  column-gap: 8px;
+  gap: 8px;
   padding: 15px 20px;
 }
 
 .save-button__icon {
   stroke: currentColor;
+  width: 21px;
+  aspect-ratio: 1/1;
+}
+
+@media (width <= 375px) {
+  .main__save-button {
+    flex-direction: column;
+  }
+  .save-button__icon {
+    width: 28px;
+  }
 }
