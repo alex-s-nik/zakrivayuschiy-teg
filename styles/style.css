@@ -16,8 +16,8 @@
 
 .page {
   color: var(--text-color);
-  background-color: var(--background-color);
   font-family: 'Inter', sans-serif;
+  background-color: var(--background-color);
   background-size: 4px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -28,6 +28,7 @@
   max-width: 700px;
   margin: 0 auto;
   border: var(--text-color) 2px solid;
+  background-color: var(--background-color);
 }
 
 .header {
@@ -73,18 +74,60 @@
   border-color: transparent;
   text-transform: uppercase;
   background-color: transparent;
+  transition: opacity 0.3s ease;
   appearance: none;
+}
+
+.theme-menu__button::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 1px;
+  background-color: var(--text-color);
+  transition: width 0.3s ease;
+}
+
+.theme-menu__button:disabled, .theme-menu__button:hover {
+  opacity: 0.6;
+}
+
+.theme-menu__button:disabled {
+  pointer-events: none;
+}
+
+.theme-menu__button:hover {
+  cursor: pointer;
 }
 
 .theme-menu__button:disabled::before {
   content: '▶';
   position: absolute;
+  animation: triangle-cursor 0.5s infinite ease-in-out alternate;
   inset-inline-start: -12px;
 }
 
+@keyframes triangle-cursor {
+  from {
+    inset-inline-start: -12px;
+  }
+  to {
+    inset-inline-start: -8px;
+  }
+  
+}
+
+.theme-menu__button:focus-visible {
+  outline: none;
+}
+
+.theme-menu__button:focus-visible::after {
+  width: 100%;
+}
+
+
 .card__title {
   padding: 4px 24px 4px 10px;
-  font-weight: 700;
+  font-weight: var(--text-header-weight);
   font-size: 18px;
 }
 
@@ -93,22 +136,23 @@
 }
 
 .card__text {
-  padding: 25px;
   display: flex;
   flex-direction: column;
   row-gap: 27px;
+  padding: 25px;
 }
 
 .card__paragraph {
+  font-weight: var(--text-content-weight);
   font-size: 18px;
 }
 
 .button {
   border: var(--text-color) 2px solid;
-  font-size: 14px;
   font-family: 'Press Start 2P';
-  appearance: none;
+  font-size: 14px;
   background-color: transparent;
+  appearance: none;
 }
 
 .card__like-button_container {
@@ -120,15 +164,11 @@
   padding: 11px 37px;
 }
 
-.main {
-  background-color: var(--background-color);
-}
-
 .main__save-button_container {
-  padding-block-start: 50px;
-  padding-block-end: 100px;
   display: flex;
   justify-content: center;
+  padding-block-start: 50px;
+  padding-block-end: 100px;
 }
 
 .main__save-button {
@@ -139,8 +179,8 @@
 }
 
 .save-button__icon {
-  stroke: currentColor;
   width: 21px;
+  stroke: currentColor;
   aspect-ratio: 1/1;
 }
 
