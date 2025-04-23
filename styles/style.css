@@ -106,16 +106,6 @@
   inset-inline-start: -12px;
 }
 
-@keyframes triangle-cursor {
-  from {
-    inset-inline-start: -12px;
-  }
-  to {
-    inset-inline-start: -8px;
-  }
-  
-}
-
 .theme-menu__button:focus-visible {
   outline: none;
 }
@@ -123,7 +113,6 @@
 .theme-menu__button:focus-visible::after {
   width: 100%;
 }
-
 
 .card__title {
   padding: 4px 24px 4px 10px;
