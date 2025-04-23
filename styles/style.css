@@ -17,7 +17,7 @@
 .page {
   color: var(--text-color);
   font-family: 'Inter', sans-serif;
-  font-variation-settings: 'wgth' var(--text-content-weight);
+  font-variation-settings: 'wght' var(--text-content-weight);
   background-size: 4px;
   min-inline-size: 320px;
   min-block-size: 100dvb;
