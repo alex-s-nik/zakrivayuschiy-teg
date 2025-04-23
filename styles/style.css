@@ -148,11 +148,52 @@
 }
 
 .button {
+  position: relative;
   border: var(--text-color) 2px solid;
   font-family: 'Press Start 2P';
   font-size: 14px;
   background-color: transparent;
+  cursor: pointer;
   appearance: none;
+}
+
+.button:focus {
+  box-shadow: 2px 2px 0 0 var(--text-color);
+  outline: none;
+  transition: box-shadow 0.3s ease;
+}
+
+.button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 0;
+  height: 100%;
+  background-color: var(--text-color);
+  transition: width 0.5s ease-in-out;
+}
+
+.button__text {
+  position: relative;
+  z-index: 1;
+}
+
+.button:hover::before {
+  width: 100%;
+}
+
+.button .button__text {
+  transition: color 1s ease;
+}
+
+.button:hover .button__text {
+  color: var(--background-color);
+}
+
+.button:hover .save-button__icon {
+  fill: var(--background-color);
 }
 
 .card__like-button_container {
@@ -161,7 +202,8 @@
 }
 
 .card__like-button {
-  padding: 11px 37px;
+  min-width: 130px;
+  min-height: 38px;
 }
 
 .main__save-button_container {
@@ -178,9 +220,87 @@
   padding: 15px 20px;
 }
 
+.like-icon {
+  z-index: 1;
+  width: 39px;
+  fill: currentColor;
+}
+
+.core {
+  fill: transparent;
+  transition: fill 0.3s 0.03s;
+}
+
+.main-body {
+  fill: transparent;
+  transition: fill 0.3s;
+}
+
+.sparks {
+  opacity: 0;
+}
+
+.like-icon:hover .core {
+  fill: var(--text-color);
+  transition: fill 0.3s;
+}
+
+.like-icon:hover .main-body {
+  fill: var(--text-color);
+  transition: fill 0.3s 0.05s;
+}
+
+.like-icon:active .contour,
+.like-icon:active .core,
+.like-icon:active .main-body,
+.like-icon.is-liked .core,
+.like-icon.is-liked .main-body {
+  fill: red;
+  transition: fill 0.3s;
+}
+
+.like-icon .contour {
+  transition: fill 0.1s linear;
+}
+
+.like-icon.is-liked .contour {
+  fill: red;
+  transition: fill 0.3s 0.06s;
+}
+
+.like-icon.is-liked .heart {
+  transform-origin: center;
+  animation: heartbeat 0.3s ease-in 0.1s;
+}
+
+.like-icon.is-liked .sparks {
+  transform-origin: center;
+  animation: sparks-lights 0.3s ease-in 0.1s;
+}
+
+.card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 2px transparent;
+  background-color: transparent;
+  transition: border-color 1.3s ease;
+  appearance: none;
+}
+
+.card__icon-button:focus {
+  outline: none;
+}
+
+.card__icon-button:focus-visible {
+  border-color: var(--text-color);
+}
+
 .save-button__icon {
+  z-index: 1;
   width: 21px;
-  stroke: currentColor;
+  fill:var(--text-color);
+  transition: fill 1s ease;
   aspect-ratio: 1/1;
 }
 
