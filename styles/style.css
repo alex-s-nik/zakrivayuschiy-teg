@@ -33,18 +33,15 @@
 }
 
 .header {
-  margin-block: 100px;
-  font-family: 'Press Start 2P', 'fantasy', sans-serif;
-}
-
-.header__logo-group {
   display: flex;
   flex-direction: column;
   align-items: center;
   row-gap: 20px;
   width: 100%;
-  margin: 0 auto;
+  margin-block: 100px;
   padding-block-start: clamp(7.5rem, 7.1484rem + 1.5vw, 8.5rem);
+  padding-block-end: 24px;
+  font-family: 'Press Start 2P', 'fantasy', sans-serif;
 }
 
 .header__title {
@@ -66,7 +63,6 @@
   display: flex;
   flex-direction: column;
   row-gap: 7px;
-  padding-block: 22px;
   font-size: 14px;
 }
 
