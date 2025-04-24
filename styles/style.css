@@ -146,12 +146,12 @@
   background-color: transparent;
   cursor: pointer;
   appearance: none;
+  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
   box-shadow: 2px 2px 0 0 var(--text-color);
   outline: none;
-  transition: box-shadow 0.3s ease;
 }
 
 .button::before {
