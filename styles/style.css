@@ -122,6 +122,8 @@
 .card__img {
   width: 100%;
   border-block: 2px solid var(--text-color);
+  object-fit: cover;
+  object-position: center;
 }
 
 .card__text {
