@@ -191,6 +191,7 @@
 .card__like-button_container {
   display: flex;
   justify-content: end;
+  gap: 4px;
 }
 
 .card__like-button {
