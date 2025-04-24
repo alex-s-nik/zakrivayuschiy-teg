@@ -16,7 +16,7 @@
 
 .page {
   color: var(--text-color);
-  font-family: 'Inter', sans-serif;
+  font-family: 'Inter', Helvetica, sans-serif;
   font-variation-settings: 'wght' var(--text-content-weight);
   background-size: 4px;
   min-inline-size: 320px;
@@ -33,7 +33,7 @@
 
 .header {
   margin-block: 100px;
-  font-family: 'Press Start 2P';
+  font-family: 'Press Start 2P', 'fantasy', sans-serif;
 }
 
 .header__logo-group {
@@ -139,7 +139,7 @@
 .button {
   position: relative;
   border: var(--text-color) 2px solid;
-  font-family: 'Press Start 2P';
+  font-family: 'Press Start 2P', 'fantasy', sans-serif;
   font-size: 14px;
   background-color: transparent;
   cursor: pointer;
