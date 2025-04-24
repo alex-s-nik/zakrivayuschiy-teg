@@ -124,6 +124,7 @@
 
 .card__img {
   width: 100%;
+  border-block: 2px solid var(--text-color);
 }
 
 .card__text {
