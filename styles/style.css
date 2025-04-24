@@ -200,14 +200,18 @@
   min-height: 38px;
 }
 
-.main__save-button_container {
+.footer {
+  border: none;
+}
+
+.footer__save-button_container {
   display: flex;
   justify-content: center;
-  padding-block-start: 56px;
+  padding-block-start: 54px;
   padding-block-end: 100px;
 }
 
-.main__save-button {
+.footer__save-button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
@@ -278,10 +282,10 @@
   justify-content: center;
   align-items: center;
   border: solid 2px transparent;
+  padding: 0;
   background-color: transparent;
   transition: border-color 1.3s ease;
   appearance: none;
-  padding: 0;
 }
 
 .card__icon-button:focus {
