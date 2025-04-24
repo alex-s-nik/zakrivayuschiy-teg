@@ -282,7 +282,7 @@
   border: solid 2px transparent;
   padding: 0;
   background-color: transparent;
-  transition: border-color 1.3s ease;
+  transition: border-color 0.3s ease;
   appearance: none;
 }
 
