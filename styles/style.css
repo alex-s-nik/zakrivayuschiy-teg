@@ -114,7 +114,7 @@
 
 .card__title {
   padding: 4px 24px 4px 10px;
-  font-weight: var(--text-header-weight);
+  font-variation-settings: 'wght' var(--text-header-weight);
   font-size: 18px;
   letter-spacing: 0.01em;
 }
