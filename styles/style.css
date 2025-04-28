@@ -112,6 +112,12 @@
   width: 100%;
 }
 
+.main {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
 .card__title {
   padding: 4px 24px 4px 10px;
   font-variation-settings: 'wght' var(--text-header-weight);
@@ -198,14 +204,10 @@
   min-height: 38px;
 }
 
-.footer {
-  border: none;
-}
-
 .main__save-button_container {
   display: flex;
   justify-content: center;
-  padding-block-start: 54px;
+  padding-block-start: 4px;
   padding-block-end: 100px;
   background-color: transparent;
 }
