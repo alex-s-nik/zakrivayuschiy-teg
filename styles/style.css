@@ -118,11 +118,25 @@
   gap: 50px;
 }
 
+.image-wrapper {
+  position: relative;
+}
+
+.watermark {
+  position: absolute;
+  top: 25px;
+  right: 25px;
+  opacity: 0.5;
+  font-family: 'Press Start 2P', 'fantasy', sans-serif;
+  font-size: 14px;
+  mix-blend-mode: hard-light;
+}
+
 .card__title {
   padding: 4px 24px 4px 10px;
-  font-variation-settings: 'wght' var(--text-header-weight);
   font-size: 18px;
   letter-spacing: 0.01em;
+  font-variation-settings: 'wght' var(--text-header-weight);
 }
 
 .card__img {
@@ -150,9 +164,9 @@
   font-family: 'Press Start 2P', 'fantasy', sans-serif;
   font-size: 14px;
   background-color: var(--background-color);
+  transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
-  transition: box-shadow 0.3s ease;
 }
 
 .button:focus {
