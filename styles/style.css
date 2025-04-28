@@ -143,7 +143,7 @@
   border: var(--text-color) 2px solid;
   font-family: 'Press Start 2P', 'fantasy', sans-serif;
   font-size: 14px;
-  background-color: transparent;
+  background-color: var(--background-color);
   cursor: pointer;
   appearance: none;
   transition: box-shadow 0.3s ease;
@@ -202,14 +202,15 @@
   border: none;
 }
 
-.footer__save-button_container {
+.main__save-button_container {
   display: flex;
   justify-content: center;
   padding-block-start: 54px;
   padding-block-end: 100px;
+  background-color: transparent;
 }
 
-.footer__save-button {
+.main__save-button {
   display: inline-flex;
   align-items: center;
   gap: 8px;
