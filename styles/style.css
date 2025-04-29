@@ -128,8 +128,56 @@
   right: 25px;
   opacity: 0.5;
   font-family: 'Press Start 2P', 'fantasy', sans-serif;
-  font-size: 14px;
-  mix-blend-mode: hard-light;
+  font-size: 16px;
+  /* mix-blend-mode: hard-light; */
+  text-shadow:
+    -1px 0 var(--watermark-stroke-color), 
+    0 1px var(--watermark-stroke-color), 
+    1px 0 var(--watermark-stroke-color), 
+    0 -1px var(--watermark-stroke-color);
+}
+
+@supports(
+  (text-stroke: 1px var(--watermark-stroke-color)) or
+  (-webkit-text-stroke: 1px var(--watermark-stroke-color))
+) {
+  .watermark {
+      -webkit-text-stroke: 1px var(--watermark-stroke-color);
+      text-stroke: 1px var(--watermark-stroke-color);
+      text-shadow: none;
+  }
+}
+
+.filter-contrast-10percents {
+  filter: contrast(10%);
+}
+
+.filter-blur-02rem {
+  filter: blur(0.2rem);
+}
+
+.filter-grayscale-08 {
+  filter: grayscale(0.8);
+}
+
+.filter-saturate-180percents {
+  filter: saturate(180%);
+}
+
+.filter-sepia-80percents {
+  filter: sepia(80%);
+}
+
+.filter-invert-08 {
+  filter: invert(0.8);
+}
+
+.filter-opacity-05 {
+  filter: opacity(0.5);
+}
+
+.filter-set {
+  filter: brightness(200%) saturate(60%) blur(3px);
 }
 
 .card__title {

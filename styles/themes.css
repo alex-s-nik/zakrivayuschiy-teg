@@ -11,6 +11,7 @@
   --text-color-active: #666;
   --text-content-weight: 400;
   --text-header-weight: 700;
+  --watermark-stroke-color: #fff;
   background-image: url(../svg/pattern-light.svg);
 }
 
@@ -21,6 +22,7 @@
     --text-color-active: #666;
     --text-content-weight: 400;
     --text-header-weight: 700;
+    --watermark-stroke-color: #fff;
   }
 
   .page {
@@ -34,6 +36,7 @@
   --text-color-active: #007a0c;
   --text-content-weight: 485;
   --text-header-weight: 765;
+  --watermark-stroke-color: #000;
   background-image: url(../svg/pattern-dark.svg);
 }
 
@@ -44,6 +47,7 @@
     --text-color-active: #007a0c;
     --text-content-weight: 485;
     --text-header-weight: 765;
+    --watermark-stroke-color: #000;
   }
 
   .page {
