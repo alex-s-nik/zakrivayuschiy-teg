@@ -126,10 +126,11 @@
   position: absolute;
   top: 25px;
   right: 25px;
+  /* mix-blend-mode: hard-light; */ /* с таким фильтром совсем все плохо различимо */
+  z-index: 1;
   opacity: 0.5;
   font-family: 'Press Start 2P', 'fantasy', sans-serif;
   font-size: 16px;
-  /* mix-blend-mode: hard-light; */
   text-shadow:
     -1px 0 var(--watermark-stroke-color), 
     0 1px var(--watermark-stroke-color), 
@@ -142,9 +143,9 @@
   (-webkit-text-stroke: 1px var(--watermark-stroke-color))
 ) {
   .watermark {
+      text-shadow: none;
       -webkit-text-stroke: 1px var(--watermark-stroke-color);
       text-stroke: 1px var(--watermark-stroke-color);
-      text-shadow: none;
   }
 }
 
@@ -211,10 +212,11 @@
   border: var(--text-color) 2px solid;
   font-family: 'Press Start 2P', 'fantasy', sans-serif;
   font-size: 14px;
-  background-color: var(--background-color);
+  background-color: var(--button-background-color);
   transition: box-shadow 0.3s ease;
   cursor: pointer;
   appearance: none;
+  /* mix-blend-mode: difference; */
 }
 
 .button:focus {
@@ -232,27 +234,18 @@
   height: 100%;
   background-color: var(--text-color);
   transition: width 0.5s ease-in-out;
+  /* mix-blend-mode: difference; */
 }
 
 .button__text {
   position: relative;
   z-index: 1;
+  color: var(--button-text-color);
+  mix-blend-mode: difference;
 }
 
 .button:hover::before {
   width: 100%;
-}
-
-.button .button__text {
-  transition: color 1s ease;
-}
-
-.button:hover .button__text {
-  color: var(--background-color);
-}
-
-.button:hover .save-button__icon {
-  fill: var(--background-color);
 }
 
 .card__like-button_container {
@@ -362,9 +355,42 @@
 .save-button__icon {
   z-index: 1;
   width: 21px;
-  fill:var(--text-color);
-  transition: fill 1s ease;
+  fill:var(--button-text-color);
   aspect-ratio: 1/1;
+  mix-blend-mode: difference;
+}
+
+.saving-dialog[open] {
+  display: flex;
+  flex-direction: column;
+  row-gap: 30px;
+  border: var(--text-color) 1px solid;
+  padding: 30px;
+  color: currentColor;
+  font-family: 'Press Start 2P', 'fantasy', sans-serif;
+  font-size: 14px;
+  background-color: var(--background-color);
+  inline-size: 391px;
+  block-size: 191px;
+}
+
+.saving-dialog::backdrop {
+  background-color: rgb(0 0 0 / 0.3);
+  backdrop-filter: blur(7px);
+}
+
+.dialog-caption {
+  display: flex;
+  gap: 20px;
+}
+
+.dialog-caption__icon {
+  display: block;
+  fill: var(--text-color);
+}
+
+.dialog-button {
+  line-height: 2.7em;
 }
 
 @media (width <= 375px) {

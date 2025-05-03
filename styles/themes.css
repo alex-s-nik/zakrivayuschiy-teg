@@ -12,6 +12,8 @@
   --text-content-weight: 400;
   --text-header-weight: 700;
   --watermark-stroke-color: #fff;
+  --button-text-color: #fff;
+  --button-background-color: #fff;
   background-image: url(../svg/pattern-light.svg);
 }
 
@@ -23,6 +25,8 @@
     --text-content-weight: 400;
     --text-header-weight: 700;
     --watermark-stroke-color: #fff;
+    --button-text-color: #fff;
+    --button-background-color: #fff;
   }
 
   .page {
@@ -37,6 +41,8 @@
   --text-content-weight: 485;
   --text-header-weight: 765;
   --watermark-stroke-color: #000;
+  --button-text-color: #00cc14;
+  --button-background-color: #000;
   background-image: url(../svg/pattern-dark.svg);
 }
 
@@ -48,6 +54,8 @@
     --text-content-weight: 485;
     --text-header-weight: 765;
     --watermark-stroke-color: #000;
+    --button-text-color: #00cc14;
+    --button-background-color: #000;
   }
 
   .page {

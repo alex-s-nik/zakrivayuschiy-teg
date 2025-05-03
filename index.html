@@ -323,7 +323,11 @@
         </div>
       </article>
       <div class="main__save-button_container">
-        <button type="button" class="button main__save-button">
+        <button
+          type="button"
+          class="button main__save-button"
+          onclick="window.dialogInsertDisk.showModal();"
+        >
           <svg class="save-button__icon" viewBox="0 0 21 21" width="28" height="28">
             <use href="./svg/floppy.svg#floppy" />
           </svg>
@@ -333,6 +337,25 @@
         </button>
       </div>
     </main>
+    <dialog id="dialogInsertDisk" class="saving-dialog">
+      <div class="dialog-caption">
+        <svg class="dialog-caption__icon" viewBox="0 0 21 21" width="78" height="39">
+          <use href="./svg/floppy.svg#floppy" />
+        </svg>
+        <p class="dialog-caption__text">
+          Вставьте дискету, чтобы продолжить
+        </p>
+      </div>
+      <button
+        type="button"
+        class="button dialog-button"
+        onclick="window.dialogInsertDisk.close();"
+      >
+        <span class="button__text">
+          ОК
+        </span>
+      </button>
+    </dialog>
     <script src="./scripts/set-theme.js"></script>
     <script src="./scripts/like.js"></script>
   </body>
