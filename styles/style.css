@@ -148,7 +148,7 @@
     0 1px var(--watermark-stroke-color), 
     1px 0 var(--watermark-stroke-color), 
     0 -1px var(--watermark-stroke-color);
-  /* mix-blend-mode: hard-light; */ /* с таким фильтром совсем все плохо различимо */
+  mix-blend-mode: hard-light;
 }
 
 @supports(
