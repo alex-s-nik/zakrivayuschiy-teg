@@ -162,31 +162,31 @@
   }
 }
 
-.filter-contrast-10percents {
+.filter-contrast {
   filter: contrast(10%);
 }
 
-.filter-blur-02rem {
+.filter-blur {
   filter: blur(0.2rem);
 }
 
-.filter-grayscale-08 {
+.filter-grayscale {
   filter: grayscale(0.8);
 }
 
-.filter-saturate-180percents {
+.filter-saturate {
   filter: saturate(180%);
 }
 
-.filter-sepia-80percents {
+.filter-sepia {
   filter: sepia(80%);
 }
 
-.filter-invert-08 {
+.filter-invert {
   filter: invert(0.8);
 }
 
-.filter-opacity-05 {
+.filter-opacity {
   filter: opacity(0.5);
 }
 
