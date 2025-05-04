@@ -17,11 +17,23 @@
 .page {
   color: var(--text-color);
   font-family: 'Inter', Helvetica, sans-serif;
-  background-color: var(--background-color);
-  background-size: 4px;
+  background-size: cover;
   font-variation-settings: 'wght' var(--text-content-weight);
   min-inline-size: 320px;
   min-block-size: 100dvb;
+  background-image: repeating-linear-gradient(
+      to right,
+      var(--gradient-color-horizontal) 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      var(--gradient-color-horizontal) 0px 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      var(--gradient-color-vertical-start),
+      var(--gradient-color-vertical-end)
+    );
 }
 
 .content {
@@ -126,7 +138,6 @@
   position: absolute;
   top: 25px;
   right: 25px;
-  /* mix-blend-mode: hard-light; */ /* с таким фильтром совсем все плохо различимо */
   z-index: 1;
   opacity: 0.5;
   font-family: 'Press Start 2P', 'fantasy', sans-serif;
@@ -136,6 +147,7 @@
     0 1px var(--watermark-stroke-color), 
     1px 0 var(--watermark-stroke-color), 
     0 -1px var(--watermark-stroke-color);
+  /* mix-blend-mode: hard-light; */ /* с таким фильтром совсем все плохо различимо */
 }
 
 @supports(

@@ -30,7 +30,6 @@
     var(--gradient-color-vertical-start),
     var(--gradient-color-vertical-end)
   );
-  background-size: cover;
 }
 
 @media(prefers-color-scheme: light) {
@@ -46,23 +45,6 @@
     --gradient-color-horizontal: #d3d3d3;
     --gradient-color-vertical-start: #e7e7e7;
     --gradient-color-vertical-end: #1a1a1a;
-  }
-
-  .page {
-    background-image: repeating-linear-gradient(
-      to right,
-      var(--gradient-color-horizontal) 0px 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(
-      var(--gradient-color-horizontal) 0px 2px,
-      transparent 2px 4px
-    ),
-    linear-gradient(
-      var(--gradient-color-vertical-start),
-      var(--gradient-color-vertical-end)
-    );
-    background-size: cover;
   }
 }
 
@@ -92,7 +74,6 @@
       var(--gradient-color-vertical-start),
       var(--gradient-color-vertical-end)
     );
-    background-size: cover;
   }
 }
 
@@ -109,22 +90,5 @@
     --gradient-color-horizontal: #000;
     --gradient-color-vertical-start: #007f0c;
     --gradient-color-vertical-end: #004306;
-  }
-
-  .page {
-    background-image: repeating-linear-gradient(
-      to right,
-      var(--gradient-color-horizontal) 0px 2px,
-      transparent 2px 4px
-    ),
-    repeating-linear-gradient(
-      var(--gradient-color-horizontal) 0px 2px,
-      transparent 2px 4px
-    ),
-    linear-gradient(
-      var(--gradient-color-vertical-start),
-      var(--gradient-color-vertical-end)
-    );
-    background-size: cover;
   }
 }
