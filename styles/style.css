@@ -383,8 +383,8 @@
   font-family: 'Press Start 2P', 'fantasy', sans-serif;
   font-size: 14px;
   background-color: var(--background-color);
-  inline-size: 391px;
-  block-size: 191px;
+  inline-size: 353px;
+  /* block-size: 191px; */
 }
 
 .saving-dialog::backdrop {
@@ -395,6 +395,7 @@
 .dialog-caption {
   display: flex;
   gap: 20px;
+  align-items: center;
 }
 
 .dialog-caption__icon {
@@ -402,15 +403,26 @@
   fill: var(--text-color);
 }
 
+.dialog-caption__text {
+  text-transform: uppercase;
+  line-height: 1.5em;
+}
+
 .dialog-button {
-  line-height: 2.7em;
+  line-height: 2.3em;
 }
 
 @media (width <= 375px) {
   .main__save-button {
     flex-direction: column;
   }
+
   .save-button__icon {
     width: 28px;
+  }
+
+  .saving-dialog[open] {
+    inline-size: 341px;
+    padding-inline: 42px;
   }
 }
