@@ -14,7 +14,23 @@
   --watermark-stroke-color: #fff;
   --button-text-color: #fff;
   --button-background-color: #fff;
-  background-image: url(../svg/pattern-light.svg);
+  --gradient-color-horizontal: #d3d3d3;
+  --gradient-color-vertical-start: #e7e7e7;
+  --gradient-color-vertical-end: #1a1a1a;
+  background-image: repeating-linear-gradient(
+    to right,
+    var(--gradient-color-horizontal) 0px 2px,
+    transparent 2px 4px
+  ),
+  repeating-linear-gradient(
+    var(--gradient-color-horizontal) 0px 2px,
+    transparent 2px 4px
+  ),
+  linear-gradient(
+    var(--gradient-color-vertical-start),
+    var(--gradient-color-vertical-end)
+  );
+  background-size: cover;
 }
 
 @media(prefers-color-scheme: light) {
@@ -27,10 +43,26 @@
     --watermark-stroke-color: #fff;
     --button-text-color: #fff;
     --button-background-color: #fff;
+    --gradient-color-horizontal: #d3d3d3;
+    --gradient-color-vertical-start: #e7e7e7;
+    --gradient-color-vertical-end: #1a1a1a;
   }
 
   .page {
-    background-image: url(../svg/pattern-light.svg);
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--gradient-color-horizontal) 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      var(--gradient-color-horizontal) 0px 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      var(--gradient-color-vertical-start),
+      var(--gradient-color-vertical-end)
+    );
+    background-size: cover;
   }
 }
 
@@ -43,7 +75,25 @@
   --watermark-stroke-color: #000;
   --button-text-color: #00cc14;
   --button-background-color: #000;
-  background-image: url(../svg/pattern-dark.svg);
+  --gradient-color-horizontal: #000;
+  --gradient-color-vertical-start: #007f0c;
+  --gradient-color-vertical-end: #004306;
+  .page {
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--gradient-color-horizontal) 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      var(--gradient-color-horizontal) 0px 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      var(--gradient-color-vertical-start),
+      var(--gradient-color-vertical-end)
+    );
+    background-size: cover;
+  }
 }
 
 @media(prefers-color-scheme: dark) {
@@ -56,9 +106,25 @@
     --watermark-stroke-color: #000;
     --button-text-color: #00cc14;
     --button-background-color: #000;
+    --gradient-color-horizontal: #000;
+    --gradient-color-vertical-start: #007f0c;
+    --gradient-color-vertical-end: #004306;
   }
 
   .page {
-    background-image: url(../svg/pattern-dark.svg);
+    background-image: repeating-linear-gradient(
+      to right,
+      var(--gradient-color-horizontal) 0px 2px,
+      transparent 2px 4px
+    ),
+    repeating-linear-gradient(
+      var(--gradient-color-horizontal) 0px 2px,
+      transparent 2px 4px
+    ),
+    linear-gradient(
+      var(--gradient-color-vertical-start),
+      var(--gradient-color-vertical-end)
+    );
+    background-size: cover;
   }
 }
