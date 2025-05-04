@@ -1,4 +1,4 @@
-name: Tests 7
+name: Tests 8
 
 on:
   push:
@@ -20,4 +20,4 @@ jobs:
       - name: Tests
         uses: Yandex-Practicum/test-project-action@v1
         with:
-          project: 'zakrivayuschiy-teg'
+          project: 'zakrivayuschiy-teg-final'
