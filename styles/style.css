@@ -17,10 +17,6 @@
 .page {
   color: var(--text-color);
   font-family: 'Inter', Helvetica, sans-serif;
-  background-size: cover;
-  font-variation-settings: 'wght' var(--text-content-weight);
-  min-inline-size: 320px;
-  min-block-size: 100dvb;
   background-image: repeating-linear-gradient(
       to right,
       var(--gradient-color-horizontal) 0px 2px,
@@ -34,6 +30,11 @@
       var(--gradient-color-vertical-start),
       var(--gradient-color-vertical-end)
     );
+  background-size: cover;
+  background-attachment: fixed;
+  font-variation-settings: 'wght' var(--text-content-weight);
+  min-inline-size: 320px;
+  min-block-size: 100dvb;
 }
 
 .content {
